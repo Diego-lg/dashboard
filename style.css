@@ -1,0 +1,105 @@
+body {
+  height: 100vh;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  grid-template-rows: 120px 1fr;
+  grid-template-areas:
+    "side header"
+    "side main";
+}
+
+.header {
+  background-color: #bae6fd;
+
+  grid-area: header;
+  box-shadow: 10px 10px;
+}
+
+.sidebar {
+  background-color: #7dd3fc;
+  grid-area: side;
+}
+
+.main {
+  display: grid;
+  background-color: #075985;
+  padding: 25px;
+  grid-area: main;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-areas:
+    "c1 c2 c3"
+    "c4 c5 c3"
+    "c6 c7 c8";
+  gap: 20px;
+}
+
+.card {
+  background-color: white;
+  border-radius: 10px;
+}
+.card:nth-child(1) {
+  grid-area: c1;
+}
+
+.card:nth-child(2) {
+  grid-area: c2;
+}
+
+.card:nth-child(3) {
+  grid-area: c3;
+}
+.card:nth-child(4) {
+  grid-area: c4;
+}
+
+.card:nth-child(5) {
+  grid-area: c5;
+}
+
+.card:nth-child(6) {
+  grid-area: c6;
+}
+.card:nth-child(7) {
+  grid-area: c7;
+}
+.card:nth-child(8) {
+  grid-area: c8;
+}
+
+@media (max-width: 925px) {
+  .main {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(3, 200px);
+  }
+  .card {
+    grid-area: initial !important;
+  }
+}
+
+.sidebar {
+  color: white;
+  font-size: 20px;
+  padding-left: 20px;
+}
+
+#Settings {
+  padding-top: 50px;
+}
+#dashicon {
+  padding: 10px 10px 10px;
+}
+.searchbar {
+  width: 30%;
+  border-radius: 10px;
+  padding-left: 0px;
+  margin-top: 25px;
+  margin-left: 10px;
+  height: 20px;
+  outline: none;
+  color: #9dbfaf;
+}
+#lupa {
+  margin-left: 30px;
+}
